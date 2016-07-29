@@ -84,34 +84,16 @@
 
 
 
-<meta name="description" content="1. &amp;#x8D77;&amp;#x56E0;
-2. &amp;#x51C6;&amp;#x5907;
-3. pb&amp;#x89E3;&amp;#x6790;&amp;#x5E93;
-4. &amp;#x4F7F;&amp;#x7528;
-
-
-1. &amp;#x8D77;&amp;#x56E0;&amp;#x516C;&amp;#x53F8;&amp;#x6709;&amp;#x4E00;&amp;#x4E2A;&amp;#x9879;&amp;#x76EE;&amp;#x4F7F;&amp;#x7528;pb(Protocol Buf">
+<meta name="description" content="1. 起因公司有一个项目使用pb(Protocol Buffers)来进行数据通信，由于历史原因，每次pb文件更新，都必须按按照一定的格式手写对应的.h和.cc文件，不仅效率比较低，而且还很容易出错，于是在忍无可忍的情况下，决定更新项目中的pb解析库，根据google的建议，我选择了2.6.0版本，对应的语言为C++。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="pb2.6.0 for ios">
 <meta property="og:url" content="http://yoursite.com/2016/07/26/pb/index.html">
 <meta property="og:site_name" content="amdops">
-<meta property="og:description" content="1. &amp;#x8D77;&amp;#x56E0;
-2. &amp;#x51C6;&amp;#x5907;
-3. pb&amp;#x89E3;&amp;#x6790;&amp;#x5E93;
-4. &amp;#x4F7F;&amp;#x7528;
-
-
-1. &amp;#x8D77;&amp;#x56E0;&amp;#x516C;&amp;#x53F8;&amp;#x6709;&amp;#x4E00;&amp;#x4E2A;&amp;#x9879;&amp;#x76EE;&amp;#x4F7F;&amp;#x7528;pb(Protocol Buf">
-<meta property="og:updated_time" content="2016-07-27T04:55:04.000Z">
+<meta property="og:description" content="1. 起因公司有一个项目使用pb(Protocol Buffers)来进行数据通信，由于历史原因，每次pb文件更新，都必须按按照一定的格式手写对应的.h和.cc文件，不仅效率比较低，而且还很容易出错，于是在忍无可忍的情况下，决定更新项目中的pb解析库，根据google的建议，我选择了2.6.0版本，对应的语言为C++。">
+<meta property="og:updated_time" content="2016-07-29T03:20:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="pb2.6.0 for ios">
-<meta name="twitter:description" content="1. &amp;#x8D77;&amp;#x56E0;
-2. &amp;#x51C6;&amp;#x5907;
-3. pb&amp;#x89E3;&amp;#x6790;&amp;#x5E93;
-4. &amp;#x4F7F;&amp;#x7528;
-
-
-1. &amp;#x8D77;&amp;#x56E0;&amp;#x516C;&amp;#x53F8;&amp;#x6709;&amp;#x4E00;&amp;#x4E2A;&amp;#x9879;&amp;#x76EE;&amp;#x4F7F;&amp;#x7528;pb(Protocol Buf">
+<meta name="twitter:description" content="1. 起因公司有一个项目使用pb(Protocol Buffers)来进行数据通信，由于历史原因，每次pb文件更新，都必须按按照一定的格式手写对应的.h和.cc文件，不仅效率比较低，而且还很容易出错，于是在忍无可忍的情况下，决定更新项目中的pb解析库，根据google的建议，我选择了2.6.0版本，对应的语言为C++。">
 
 
 
@@ -318,15 +300,8 @@
       
 
       
-        <!-- toc -->
-<ul>
-<li><a href="#1-&#x8D77;&#x56E0;">1. &#x8D77;&#x56E0;</a></li>
-<li><a href="#2-&#x51C6;&#x5907;">2. &#x51C6;&#x5907;</a></li>
-<li><a href="#3-pb&#x89E3;&#x6790;&#x5E93;">3. pb&#x89E3;&#x6790;&#x5E93;</a></li>
-<li><a href="#4-&#x4F7F;&#x7528;">4. &#x4F7F;&#x7528;</a></li>
-</ul>
-<!-- tocstop -->
-<h2 id="1-&#x8D77;&#x56E0;"><a href="#1-&#x8D77;&#x56E0;" class="headerlink" title="1. &#x8D77;&#x56E0;"></a>1. &#x8D77;&#x56E0;</h2><p>&#x516C;&#x53F8;&#x6709;&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#x4F7F;&#x7528;pb(Protocol Buffers)&#x6765;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x901A;&#x4FE1;&#xFF0C;&#x7531;&#x4E8E;&#x5386;&#x53F2;&#x539F;&#x56E0;&#xFF0C;&#x6BCF;&#x6B21;pb&#x6587;&#x4EF6;&#x66F4;&#x65B0;&#xFF0C;&#x90FD;&#x5FC5;&#x987B;&#x6309;&#x6309;&#x7167;&#x4E00;&#x5B9A;&#x7684;&#x683C;&#x5F0F;&#x624B;&#x5199;&#x5BF9;&#x5E94;&#x7684;.h&#x548C;.cc&#x6587;&#x4EF6;&#xFF0C;&#x4E0D;&#x4EC5;&#x6548;&#x7387;&#x6BD4;&#x8F83;&#x4F4E;&#xFF0C;&#x800C;&#x4E14;&#x8FD8;&#x5F88;&#x5BB9;&#x6613;&#x51FA;&#x9519;&#xFF0C;&#x4E8E;&#x662F;&#x5728;&#x5FCD;&#x65E0;&#x53EF;&#x5FCD;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x51B3;&#x5B9A;&#x66F4;&#x65B0;&#x9879;&#x76EE;&#x4E2D;&#x7684;pb&#x89E3;&#x6790;&#x5E93;&#xFF0C;&#x6839;&#x636E;google&#x7684;&#x5EFA;&#x8BAE;&#xFF0C;&#x6211;&#x9009;&#x62E9;&#x4E86;2.6.0&#x7248;&#x672C;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;&#x8BED;&#x8A00;&#x4E3A;C++&#x3002;</p>
+        <h2 id="1-&#x8D77;&#x56E0;"><a href="#1-&#x8D77;&#x56E0;" class="headerlink" title="1. &#x8D77;&#x56E0;"></a>1. &#x8D77;&#x56E0;</h2><p>&#x516C;&#x53F8;&#x6709;&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#x4F7F;&#x7528;pb(Protocol Buffers)&#x6765;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x901A;&#x4FE1;&#xFF0C;&#x7531;&#x4E8E;&#x5386;&#x53F2;&#x539F;&#x56E0;&#xFF0C;&#x6BCF;&#x6B21;pb&#x6587;&#x4EF6;&#x66F4;&#x65B0;&#xFF0C;&#x90FD;&#x5FC5;&#x987B;&#x6309;&#x6309;&#x7167;&#x4E00;&#x5B9A;&#x7684;&#x683C;&#x5F0F;&#x624B;&#x5199;&#x5BF9;&#x5E94;&#x7684;.h&#x548C;.cc&#x6587;&#x4EF6;&#xFF0C;&#x4E0D;&#x4EC5;&#x6548;&#x7387;&#x6BD4;&#x8F83;&#x4F4E;&#xFF0C;&#x800C;&#x4E14;&#x8FD8;&#x5F88;&#x5BB9;&#x6613;&#x51FA;&#x9519;&#xFF0C;&#x4E8E;&#x662F;&#x5728;&#x5FCD;&#x65E0;&#x53EF;&#x5FCD;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x51B3;&#x5B9A;&#x66F4;&#x65B0;&#x9879;&#x76EE;&#x4E2D;&#x7684;pb&#x89E3;&#x6790;&#x5E93;&#xFF0C;&#x6839;&#x636E;google&#x7684;&#x5EFA;&#x8BAE;&#xFF0C;&#x6211;&#x9009;&#x62E9;&#x4E86;2.6.0&#x7248;&#x672C;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;&#x8BED;&#x8A00;&#x4E3A;C++&#x3002;</p>
+<a id="more"></a>
 <h2 id="2-&#x51C6;&#x5907;"><a href="#2-&#x51C6;&#x5907;" class="headerlink" title="2. &#x51C6;&#x5907;"></a>2. &#x51C6;&#x5907;</h2><ol>
 <li><a href="https://github.com/google/protobuf/releases/download/v2.6.0/protobuf-2.6.0.zip" target="_blank" rel="external">pb2.6.0&#x4E0B;&#x8F7D;&#x5730;&#x5740;</a></li>
 <li>&#x73AF;&#x5883;&#xFF1A;mac os x EI Captian,&#x7248;&#x672C;10.11.6</li>
