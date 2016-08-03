@@ -16,7 +16,7 @@
 <h2 id="3-pb&#x89E3;&#x6790;&#x5E93;"><a href="#3-pb&#x89E3;&#x6790;&#x5E93;" class="headerlink" title="3. pb&#x89E3;&#x6790;&#x5E93;"></a>3. pb&#x89E3;&#x6790;&#x5E93;</h2><ol>
 <li>&#x62F7;&#x8D1D;&#x6587;&#x4EF6;&#x5939;protobuf-2.6.0\src\google&#x5230;&#x684C;&#x9762;   </li>
 <li>&#x5220;&#x9664;compiler&#x6587;&#x4EF6;&#x5939;&#x3001;testdata&#x6587;&#x4EF6;&#x5939;&#x3001;testing&#x6587;&#x4EF6;&#x5939;   </li>
-<li>&#x5220;&#x9664;&#x6240;&#x6709;.o,.lo,.sh&#x6587;&#x4EF6;  </li>
+<li>&#x5220;&#x9664;&#x6240;&#x6709;.o,.lo,.sh,.proto&#x6587;&#x4EF6;  </li>
 <li>&#x5220;&#x9664;&#x6240;&#x6709;&#x5305;&#x542B;test&#x7684;&#x6587;&#x4EF6;  </li>
 <li>&#x5220;&#x9664;.deps&#x6587;&#x4EF6;&#x5939;&#xFF0C;.lib&#x6587;&#x4EF6;&#x5939;&#xFF0C;.dirstamp&#x6587;&#x4EF6;&#x5939;  </li>
 <li>&#x5220;&#x9664;&#x6587;&#x4EF6;stringprintf.cc&#x6587;&#x4EF6;&#x4E2D;#include <google protobuf="" testing="" googletest.h="">&#x8FD9;&#x4E00;&#x884C;  </google></li>
