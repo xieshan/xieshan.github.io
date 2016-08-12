@@ -246,6 +246,122 @@
             
               
                 
+                <a class="post-title-link" href="/2016/08/10/ios_develop_tip/" itemprop="url">
+                  IOS开发小记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-10T10:37:06+08:00" content="2016-08-10">
+              2016-08-10
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/10/ios_develop_tip/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/10/ios_develop_tip/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/08/10/ios_develop_tip/" class="leancloud_visitors" data-flag-title="IOS开发小记">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h5 id="uiimage&#x7C7B;imagenamed&#x65B9;&#x6CD5;&#x4E0E;imagewithcontentsoffile&#x533A;&#x522B;"><a href="#UIImage&#x7C7B;imageNamed-&#x65B9;&#x6CD5;&#x4E0E;imageWithContentsOfFile-&#x533A;&#x522B;" class="headerlink" title="UIImage&#x7C7B;imageNamed:&#x65B9;&#x6CD5;&#x4E0E;imageWithContentsOfFile:&#x533A;&#x522B;"></a>UIImage&#x7C7B;imageNamed:&#x65B9;&#x6CD5;&#x4E0E;imageWithContentsOfFile:&#x533A;&#x522B;</h5><p>&#x4E24;&#x8005;&#x7684;&#x533A;&#x522B;&#x5728;&#x4E8E;&#x7CFB;&#x7EDF;&#x662F;&#x5426;&#x4F1A;&#x5BF9;&#x56FE;&#x7247;&#x8FDB;&#x884C;&#x7F13;&#x5B58;  </p>
+<ol>
+<li>&#x4F7F;&#x7528;imageNamed&#xFF1A;&#x65B9;&#x6CD5;&#x52A0;&#x8F7D;&#x56FE;&#x7247;&#xFF0C;&#x7CFB;&#x7EDF;&#x9996;&#x5148;&#x4F1A;&#x6839;&#x636E;&#x6587;&#x4EF6;&#x540D;&#x79F0;&#x53BB;&#x7F13;&#x5B58;&#x4E2D;&#x641C;&#x7D22;&#xFF0C;&#x5982;&#x679C;&#x7F13;&#x5B58;&#x4E2D;&#x6709;&#x8BE5;&#x56FE;&#x7247;&#xFF0C;&#x76F4;&#x63A5;&#x52A0;&#x8F7D;&#x56FE;&#x7247;&#xFF1B;&#x5982;&#x679C;&#x7F13;&#x5B58;&#x4E2D;&#x6CA1;&#x6709;&#x8BE5;&#x56FE;&#x7247;&#xFF0C;&#x7CFB;&#x7EDF;&#x5C31;&#x4F1A;&#x5230;app&#x76EE;&#x5F55;&#x4E0B;&#x641C;&#x7D22;&#x6539;&#x56FE;&#x7247;&#x5E76;&#x5BF9;&#x56FE;&#x7247;&#x8FDB;&#x884C;&#x7F13;&#x5B58;&#xFF1B;  </li>
+<li>&#x4F7F;&#x7528;imageWithContentsOfFile:&#x65B9;&#x6CD5;&#x52A0;&#x8F7D;&#x56FE;&#x7247;&#xFF0C;&#x7CFB;&#x7EDF;&#x6839;&#x636E;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x5728;app&#x76EE;&#x5F55;&#x4E0B;&#x641C;&#x7D22;&#x56FE;&#x7247;&#x6587;&#x4EF6;&#x5E76;&#x76F4;&#x63A5;&#x52A0;&#x8F7D;&#xFF0C;&#x4E0D;&#x4F1A;&#x5BF9;&#x56FE;&#x7247;&#x8FDB;&#x884C;&#x7F13;&#x5B58;&#x3002;<br>&#x641E;&#x6E05;&#x695A;&#x4E24;&#x8005;&#x7684;&#x533A;&#x522B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x5F88;&#x5BB9;&#x6613;&#x6839;&#x636E;&#x4F7F;&#x7528;&#x573A;&#x666F;&#x9009;&#x62E9;&#x76F8;&#x5E94;&#x7684;api&#x8FDB;&#x884C;&#x56FE;&#x7247;&#x52A0;&#x8F7D;  </li>
+<li>&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x56FE;&#x7247;&#x9700;&#x8981;&#x9891;&#x7E41;&#x88AB;&#x52A0;&#x8F7D;&#x663E;&#x793A;&#x7684;&#x8BDD;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;imageNamed:&#x65B9;&#x6CD5;&#xFF1B;</li>
+<li>&#x6392;&#x9664;&#x4E0A;&#x8FF0;&#x60C5;&#x51B5;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x8003;&#x8651;&#x4F7F;&#x7528;imageWithContentOfFile:&#x65B9;&#x6CD5;&#x3002;<br>&#x8BF4;&#x660E;&#xFF1A;&#x7CFB;&#x7EDF;&#x4F1A;&#x66F4;&#x52A0;app&#x5360;&#x7528;&#x7684;&#x5185;&#x5B58;&#x60C5;&#x51B5;&#xFF0C;&#x4E0D;&#x5B9A;&#x65F6;&#x7684;&#x6E05;&#x7406;&#x7F13;&#x5B58;&#x6570;&#x636E;&#x3002;</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/08/05/github_use/" itemprop="url">
                   github使用整理
                 </a>
@@ -418,7 +534,9 @@
       
         
           <h3 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h3><p>姓名:汤杰　　　　　　　　　　　　　　　　　　　学历:本科<br>毕业院校:西藏民族学院  　　　　　　　　　　　　  专业:信息管理与信息系统<br>联系方式:188-2002-5684  　　　　　　　　　　　　邮箱:amdops@aliyun.com</p>
-<h3 id="擅长语言"><a href="#擅长语言" class="headerlink" title="擅长语言"></a>擅长语言</h3><p>C、C++、Object-C，python</p>
+<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><blockquote>
+<p>七年移动端开发经验，涉及的领域包括移动支付，工具类、社交、游戏相关等，对移动端产品有一定的见解和认识。相当熟悉app开发到上线整套流程（app开发者账号申请、app开发设计与开发进度把控、app上线、app相关数据监控、缺陷控制与修复、技术点演化），从业至今，也带领过团队并获得领导的认可和嘉奖，有一定的管理方面的能力和经验。一直保持学习的心态，了解行业内最新的技术和动态，不断提高自己在技术上的高度。喜好探究技术原理、分享个人心得与技术交流，自我的定位是移动领域内的专家。</p>
+</blockquote>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/08/05/person_introduce/#more" rel="contents">
               阅读全文 &raquo;
@@ -603,7 +721,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
