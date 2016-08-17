@@ -246,6 +246,121 @@
             
               
                 
+                <a class="post-title-link" href="/2016/08/12/object-c-base-study/" itemprop="url">
+                  object-c base study
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-12T15:31:39+08:00" content="2016-08-12">
+              2016-08-12
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/12/object-c-base-study/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/12/object-c-base-study/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/08/12/object-c-base-study/" class="leancloud_visitors" data-flag-title="object-c base study">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="&#x5411;&#x524D;&#x58F0;&#x660E;-class"><a href="#&#x5411;&#x524D;&#x58F0;&#x660E;-class" class="headerlink" title="&#x5411;&#x524D;&#x58F0;&#x660E; @class"></a>&#x5411;&#x524D;&#x58F0;&#x660E; @class</h4><p>&#x5411;&#x524D;&#x58F0;&#x660E;&#x7684;&#x597D;&#x5904;&#x662F;&#x907F;&#x514D;&#x76F8;&#x4E92;&#x4F9D;&#x8D56;&#xFF0C;&#x51CF;&#x5C11;&#x7F16;&#x8BD1;&#x65F6;&#x95F4;&#xFF0C;&#x4F46;&#x662F;&#x5411;&#x524D;&#x58F0;&#x660E;&#x4E0D;&#x80FD;&#x7528;&#x5728;&#x4EE5;&#x4E0B;&#x573A;&#x666F;&#x3002;&#x56E0;&#x4E3A;&#x5411;&#x524D;&#x58F0;&#x660E;&#x53EA;&#x662F;&#x544A;&#x77E5;&#x7F16;&#x8BD1;&#x5668;&#x6709;&#x8FD9;&#x4E48;&#x4E00;&#x4E2A;&#x201C;&#x4E1C;&#x897F;&#x201D;&#xFF0C;&#x81F3;&#x4E8E;&#x5B83;&#x7684;&#x7EC6;&#x8282;&#xFF08;&#x65B9;&#x6CD5;&#xFF0C;&#x5C5E;&#x6027;&#xFF09;&#x7F16;&#x8BD1;&#x5668;&#x5E76;&#x4E0D;&#x77E5;&#x9053;&#xFF0C;&#x4F46;&#x662F;&#x4EE5;&#x4E0B;&#x573A;&#x666F;&#xFF0C;&#x7F16;&#x8BD1;&#x5668;&#x5FC5;&#x987B;&#x77E5;&#x9053;&#x8FD9;&#x4E2A;&#x201C;&#x4E1C;&#x897F;&#x201D;&#x7684;&#x7EC6;&#x8282;&#x3002;</p>
+<ul>
+<li>&#x4E00;&#x4E2A;&#x7C7B;&#x7EE7;&#x627F;&#x53E6;&#x4E00;&#x4E2A;&#x7C7B;</li>
+<li>&#x4E00;&#x4E2A;&#x7C7B;&#x9075;&#x5FAA;&#x67D0;&#x4E2A;&#x534F;&#x8BAE;&#xFF08;protocol&#xFF09;</li>
+</ul>
+<h4 id="atomic&#x4E0E;nonatomic"><a href="#atomic&#x4E0E;nonatomic" class="headerlink" title="atomic&#x4E0E;nonatomic"></a>atomic&#x4E0E;nonatomic</h4><p>&#x5982;&#x679C;&#x5F00;&#x53D1;&#x8FC7;IOS&#x7A0B;&#x5E8F;&#xFF0C;&#x4F60;&#x5C31;&#x4F1A;&#x53D1;&#x73B0;&#xFF0C;&#x5176;&#x4E2D;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x90FD;&#x58F0;&#x660E;&#x4E3A;nonatomic&#x3002;&#x8FD9;&#x6837;&#x505A;&#x7684;&#x5386;&#x53F2;&#x539F;&#x56E0;&#x662F;&#xFF1A;&#x5728;ios&#x4E2D;&#x4F7F;&#x7528;&#x540C;&#x6B65;&#x9501;&#x7684;&#x5F00;&#x9500;&#x8F83;&#x5927;&#xFF0C;&#x8FD9;&#x4F1A;&#x5E26;&#x6765;&#x6027;&#x80FD;&#x95EE;&#x9898;&#x3002;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x5E76;&#x4E0D;&#x8981;&#x6C42;&#x5C5E;&#x6027;&#x5FC5;&#x987B;&#x662F;&#x201C;&#x539F;&#x5B50;&#x7684;&#x201D;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x5E76;&#x4E0D;&#x80FD;&#x4FDD;&#x8BC1;&#x201C;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x201D;&#xFF0C;&#x82E5;&#x8981;&#x5B9E;&#x73B0;&#x201C;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x201D;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x91C7;&#x53D6;&#x66F4;&#x4E3A;&#x6DF1;&#x5C42;&#x7684;&#x9501;&#x5B9A;&#x673A;&#x5236;&#x3002;<br><strong>&#x8BF4;&#x660E;&#xFF1A;NSString&#x7C7B;&#x578B;&#x7684;&#x5C5E;&#x6027;&#x901A;&#x5E38;&#x4F7F;&#x7528;copy&#x4FEE;&#x9970;&#x7B26;&#x6765;&#x8FDB;&#x884C;&#x4FDD;&#x62A4;&#x64CD;&#x4F5C;</strong></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/08/10/ios_develop_tip/" itemprop="url">
                   IOS开发小记
                 </a>
@@ -427,121 +542,6 @@
 </ol>
 
           
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/08/05/person_introduce/" itemprop="url">
-                  个人简历
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-05T09:03:52+08:00" content="2016-08-05">
-              2016-08-05
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/08/05/person_introduce/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/05/person_introduce/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/08/05/person_introduce/" class="leancloud_visitors" data-flag-title="个人简历">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h3><p>姓名:汤杰　　　　　　　　　　　　　　　　　　　学历:本科<br>毕业院校:西藏民族学院  　　　　　　　　　　　　  专业:信息管理与信息系统<br>联系方式:188-2002-5684  　　　　　　　　　　　　邮箱:amdops@aliyun.com</p>
-<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><blockquote>
-<p>七年移动端开发经验，涉及的领域包括移动支付，工具类、社交、游戏相关等，对移动端产品有一定的见解和认识。相当熟悉app开发到上线整套流程（app开发者账号申请、app开发设计与开发进度把控、app上线、app相关数据监控、缺陷控制与修复、技术点演化），从业至今，也带领过团队并获得领导的认可和嘉奖，有一定的管理方面的能力和经验。一直保持学习的心态，了解行业内最新的技术和动态，不断提高自己在技术上的高度。喜好探究技术原理、分享个人心得与技术交流，自我的定位是移动领域内的专家。</p>
-</blockquote>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/08/05/person_introduce/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
         
       
     </div>
