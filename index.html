@@ -425,15 +425,17 @@
 
       
         
-          
-            <h4 id="&#x5411;&#x524D;&#x58F0;&#x660E;-class"><a href="#&#x5411;&#x524D;&#x58F0;&#x660E;-class" class="headerlink" title="&#x5411;&#x524D;&#x58F0;&#x660E; @class"></a>&#x5411;&#x524D;&#x58F0;&#x660E; @class</h4><p>&#x5411;&#x524D;&#x58F0;&#x660E;&#x7684;&#x597D;&#x5904;&#x662F;&#x907F;&#x514D;&#x76F8;&#x4E92;&#x4F9D;&#x8D56;&#xFF0C;&#x51CF;&#x5C11;&#x7F16;&#x8BD1;&#x65F6;&#x95F4;&#xFF0C;&#x4F46;&#x662F;&#x5411;&#x524D;&#x58F0;&#x660E;&#x4E0D;&#x80FD;&#x7528;&#x5728;&#x4EE5;&#x4E0B;&#x573A;&#x666F;&#x3002;&#x56E0;&#x4E3A;&#x5411;&#x524D;&#x58F0;&#x660E;&#x53EA;&#x662F;&#x544A;&#x77E5;&#x7F16;&#x8BD1;&#x5668;&#x6709;&#x8FD9;&#x4E48;&#x4E00;&#x4E2A;&#x201C;&#x4E1C;&#x897F;&#x201D;&#xFF0C;&#x81F3;&#x4E8E;&#x5B83;&#x7684;&#x7EC6;&#x8282;&#xFF08;&#x65B9;&#x6CD5;&#xFF0C;&#x5C5E;&#x6027;&#xFF09;&#x7F16;&#x8BD1;&#x5668;&#x5E76;&#x4E0D;&#x77E5;&#x9053;&#xFF0C;&#x4F46;&#x662F;&#x4EE5;&#x4E0B;&#x573A;&#x666F;&#xFF0C;&#x7F16;&#x8BD1;&#x5668;&#x5FC5;&#x987B;&#x77E5;&#x9053;&#x8FD9;&#x4E2A;&#x201C;&#x4E1C;&#x897F;&#x201D;&#x7684;&#x7EC6;&#x8282;&#x3002;</p>
+          <h4 id="向前声明-class"><a href="#向前声明-class" class="headerlink" title="向前声明 @class"></a>向前声明 @class</h4><p>向前声明的好处是避免相互依赖，减少编译时间，但是向前声明不能用在以下场景。因为向前声明只是告知编译器有这么一个“东西”，至于它的细节（方法，属性）编译器并不知道，但是以下场景，编译器必须知道这个“东西”的细节。</p>
 <ul>
-<li>&#x4E00;&#x4E2A;&#x7C7B;&#x7EE7;&#x627F;&#x53E6;&#x4E00;&#x4E2A;&#x7C7B;</li>
-<li>&#x4E00;&#x4E2A;&#x7C7B;&#x9075;&#x5FAA;&#x67D0;&#x4E2A;&#x534F;&#x8BAE;&#xFF08;protocol&#xFF09;</li>
+<li>一个类继承另一个类</li>
+<li>一个类遵循某个协议（protocol）</li>
 </ul>
-<h4 id="atomic&#x4E0E;nonatomic"><a href="#atomic&#x4E0E;nonatomic" class="headerlink" title="atomic&#x4E0E;nonatomic"></a>atomic&#x4E0E;nonatomic</h4><p>&#x5982;&#x679C;&#x5F00;&#x53D1;&#x8FC7;IOS&#x7A0B;&#x5E8F;&#xFF0C;&#x4F60;&#x5C31;&#x4F1A;&#x53D1;&#x73B0;&#xFF0C;&#x5176;&#x4E2D;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x90FD;&#x58F0;&#x660E;&#x4E3A;nonatomic&#x3002;&#x8FD9;&#x6837;&#x505A;&#x7684;&#x5386;&#x53F2;&#x539F;&#x56E0;&#x662F;&#xFF1A;&#x5728;ios&#x4E2D;&#x4F7F;&#x7528;&#x540C;&#x6B65;&#x9501;&#x7684;&#x5F00;&#x9500;&#x8F83;&#x5927;&#xFF0C;&#x8FD9;&#x4F1A;&#x5E26;&#x6765;&#x6027;&#x80FD;&#x95EE;&#x9898;&#x3002;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x5E76;&#x4E0D;&#x8981;&#x6C42;&#x5C5E;&#x6027;&#x5FC5;&#x987B;&#x662F;&#x201C;&#x539F;&#x5B50;&#x7684;&#x201D;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x5E76;&#x4E0D;&#x80FD;&#x4FDD;&#x8BC1;&#x201C;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x201D;&#xFF0C;&#x82E5;&#x8981;&#x5B9E;&#x73B0;&#x201C;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x201D;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x91C7;&#x53D6;&#x66F4;&#x4E3A;&#x6DF1;&#x5C42;&#x7684;&#x9501;&#x5B9A;&#x673A;&#x5236;&#x3002;<br><strong>&#x8BF4;&#x660E;&#xFF1A;NSString&#x7C7B;&#x578B;&#x7684;&#x5C5E;&#x6027;&#x901A;&#x5E38;&#x4F7F;&#x7528;copy&#x4FEE;&#x9970;&#x7B26;&#x6765;&#x8FDB;&#x884C;&#x4FDD;&#x62A4;&#x64CD;&#x4F5C;</strong></p>
-
-          
+<h4 id="atomic与nonatomic"><a href="#atomic与nonatomic" class="headerlink" title="atomic与nonatomic"></a>atomic与nonatomic</h4><p>如果开发过IOS程序，你就会发现，其中所有属性都声明为nonatomic。这样做的历史原因是：在ios中使用同步锁的开销较大，这会带来性能问题。一般情况下并不要求属性必须是“原子的”，因为这并不能保证“线程安全”，若要实现“线程安全”的操作，还需要采取更为深层的锁定机制。<br><strong>说明：NSString类型的属性通常使用copy修饰符来进行保护操作</strong></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/08/12/object-c-base-study/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -540,16 +542,18 @@
 
       
         
-          
-            <h5 id="uiimage&#x7C7B;imagenamed&#x65B9;&#x6CD5;&#x4E0E;imagewithcontentsoffile&#x533A;&#x522B;"><a href="#UIImage&#x7C7B;imageNamed-&#x65B9;&#x6CD5;&#x4E0E;imageWithContentsOfFile-&#x533A;&#x522B;" class="headerlink" title="UIImage&#x7C7B;imageNamed:&#x65B9;&#x6CD5;&#x4E0E;imageWithContentsOfFile:&#x533A;&#x522B;"></a>UIImage&#x7C7B;imageNamed:&#x65B9;&#x6CD5;&#x4E0E;imageWithContentsOfFile:&#x533A;&#x522B;</h5><p>&#x4E24;&#x8005;&#x7684;&#x533A;&#x522B;&#x5728;&#x4E8E;&#x7CFB;&#x7EDF;&#x662F;&#x5426;&#x4F1A;&#x5BF9;&#x56FE;&#x7247;&#x8FDB;&#x884C;&#x7F13;&#x5B58;  </p>
+          <h4 id="UIImage类imageNamed-方法与imageWithContentsOfFile-区别"><a href="#UIImage类imageNamed-方法与imageWithContentsOfFile-区别" class="headerlink" title="UIImage类imageNamed:方法与imageWithContentsOfFile:区别"></a>UIImage类imageNamed:方法与imageWithContentsOfFile:区别</h4><p>两者的区别在于系统是否会对图片进行缓存  </p>
 <ol>
-<li>&#x4F7F;&#x7528;imageNamed&#xFF1A;&#x65B9;&#x6CD5;&#x52A0;&#x8F7D;&#x56FE;&#x7247;&#xFF0C;&#x7CFB;&#x7EDF;&#x9996;&#x5148;&#x4F1A;&#x6839;&#x636E;&#x6587;&#x4EF6;&#x540D;&#x79F0;&#x53BB;&#x7F13;&#x5B58;&#x4E2D;&#x641C;&#x7D22;&#xFF0C;&#x5982;&#x679C;&#x7F13;&#x5B58;&#x4E2D;&#x6709;&#x8BE5;&#x56FE;&#x7247;&#xFF0C;&#x76F4;&#x63A5;&#x52A0;&#x8F7D;&#x56FE;&#x7247;&#xFF1B;&#x5982;&#x679C;&#x7F13;&#x5B58;&#x4E2D;&#x6CA1;&#x6709;&#x8BE5;&#x56FE;&#x7247;&#xFF0C;&#x7CFB;&#x7EDF;&#x5C31;&#x4F1A;&#x5230;app&#x76EE;&#x5F55;&#x4E0B;&#x641C;&#x7D22;&#x6539;&#x56FE;&#x7247;&#x5E76;&#x5BF9;&#x56FE;&#x7247;&#x8FDB;&#x884C;&#x7F13;&#x5B58;&#xFF1B;  </li>
-<li>&#x4F7F;&#x7528;imageWithContentsOfFile:&#x65B9;&#x6CD5;&#x52A0;&#x8F7D;&#x56FE;&#x7247;&#xFF0C;&#x7CFB;&#x7EDF;&#x6839;&#x636E;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x5728;app&#x76EE;&#x5F55;&#x4E0B;&#x641C;&#x7D22;&#x56FE;&#x7247;&#x6587;&#x4EF6;&#x5E76;&#x76F4;&#x63A5;&#x52A0;&#x8F7D;&#xFF0C;&#x4E0D;&#x4F1A;&#x5BF9;&#x56FE;&#x7247;&#x8FDB;&#x884C;&#x7F13;&#x5B58;&#x3002;<br>&#x641E;&#x6E05;&#x695A;&#x4E24;&#x8005;&#x7684;&#x533A;&#x522B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x5F88;&#x5BB9;&#x6613;&#x6839;&#x636E;&#x4F7F;&#x7528;&#x573A;&#x666F;&#x9009;&#x62E9;&#x76F8;&#x5E94;&#x7684;api&#x8FDB;&#x884C;&#x56FE;&#x7247;&#x52A0;&#x8F7D;  </li>
-<li>&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x56FE;&#x7247;&#x9700;&#x8981;&#x9891;&#x7E41;&#x88AB;&#x52A0;&#x8F7D;&#x663E;&#x793A;&#x7684;&#x8BDD;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;imageNamed:&#x65B9;&#x6CD5;&#xFF1B;</li>
-<li>&#x6392;&#x9664;&#x4E0A;&#x8FF0;&#x60C5;&#x51B5;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x8003;&#x8651;&#x4F7F;&#x7528;imageWithContentOfFile:&#x65B9;&#x6CD5;&#x3002;<br>&#x8BF4;&#x660E;&#xFF1A;&#x7CFB;&#x7EDF;&#x4F1A;&#x66F4;&#x52A0;app&#x5360;&#x7528;&#x7684;&#x5185;&#x5B58;&#x60C5;&#x51B5;&#xFF0C;&#x4E0D;&#x5B9A;&#x65F6;&#x7684;&#x6E05;&#x7406;&#x7F13;&#x5B58;&#x6570;&#x636E;&#x3002;</li>
+<li>使用imageNamed：方法加载图片，系统首先会根据文件名称去缓存中搜索，如果缓存中有该图片，直接加载图片；如果缓存中没有该图片，系统就会到app目录下搜索改图片并对图片进行缓存；  </li>
+<li>使用imageWithContentsOfFile:方法加载图片，系统根据文件路径在app目录下搜索图片文件并直接加载，不会对图片进行缓存。<br>搞清楚两者的区别后，我们就很容易根据使用场景选择相应的api进行图片加载  </li>
+<li>如果一个图片需要频繁被加载显示的话，就可以使用imageNamed:方法；</li>
+<li>排除上述情况，我们就可以考虑使用imageWithContentOfFile:方法。<br>说明：系统会更加app占用的内存情况，不定时的清理缓存数据。</li>
 </ol>
-
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/08/10/ios_develop_tip/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>

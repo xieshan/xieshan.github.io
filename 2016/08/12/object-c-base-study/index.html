@@ -84,16 +84,31 @@
 
 
 
-<meta name="description" content="&amp;#x5411;&amp;#x524D;&amp;#x58F0;&amp;#x660E; @class&amp;#x5411;&amp;#x524D;&amp;#x58F0;&amp;#x660E;&amp;#x7684;&amp;#x597D;&amp;#x5904;&amp;#x662F;&amp;#x907F;&amp;#x514D;&amp;#x76F8;&amp;#x4E92;&amp;#x4F9D;&amp;#x8D56;&amp;#xFF0C;&amp;#x51CF;&amp;#x5C11;&amp;#x7F16;&amp;#x8BD1;&amp;#x65F6;&amp;">
+<meta name="description" content="向前声明 @class向前声明的好处是避免相互依赖，减少编译时间，但是向前声明不能用在以下场景。因为向前声明只是告知编译器有这么一个“东西”，至于它的细节（方法，属性）编译器并不知道，但是以下场景，编译器必须知道这个“东西”的细节。
+
+一个类继承另一个类
+一个类遵循某个协议（protocol）
+
+atomic与nonatomic如果开发过IOS程序，你就会发现，其中所有属性都声明为nonatomi">
 <meta property="og:type" content="article">
 <meta property="og:title" content="object-c base study">
 <meta property="og:url" content="http://yoursite.com/2016/08/12/object-c-base-study/index.html">
 <meta property="og:site_name" content="amdops">
-<meta property="og:description" content="&amp;#x5411;&amp;#x524D;&amp;#x58F0;&amp;#x660E; @class&amp;#x5411;&amp;#x524D;&amp;#x58F0;&amp;#x660E;&amp;#x7684;&amp;#x597D;&amp;#x5904;&amp;#x662F;&amp;#x907F;&amp;#x514D;&amp;#x76F8;&amp;#x4E92;&amp;#x4F9D;&amp;#x8D56;&amp;#xFF0C;&amp;#x51CF;&amp;#x5C11;&amp;#x7F16;&amp;#x8BD1;&amp;#x65F6;&amp;">
-<meta property="og:updated_time" content="2016-08-12T09:01:28.000Z">
+<meta property="og:description" content="向前声明 @class向前声明的好处是避免相互依赖，减少编译时间，但是向前声明不能用在以下场景。因为向前声明只是告知编译器有这么一个“东西”，至于它的细节（方法，属性）编译器并不知道，但是以下场景，编译器必须知道这个“东西”的细节。
+
+一个类继承另一个类
+一个类遵循某个协议（protocol）
+
+atomic与nonatomic如果开发过IOS程序，你就会发现，其中所有属性都声明为nonatomi">
+<meta property="og:updated_time" content="2016-08-30T10:58:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="object-c base study">
-<meta name="twitter:description" content="&amp;#x5411;&amp;#x524D;&amp;#x58F0;&amp;#x660E; @class&amp;#x5411;&amp;#x524D;&amp;#x58F0;&amp;#x660E;&amp;#x7684;&amp;#x597D;&amp;#x5904;&amp;#x662F;&amp;#x907F;&amp;#x514D;&amp;#x76F8;&amp;#x4E92;&amp;#x4F9D;&amp;#x8D56;&amp;#xFF0C;&amp;#x51CF;&amp;#x5C11;&amp;#x7F16;&amp;#x8BD1;&amp;#x65F6;&amp;">
+<meta name="twitter:description" content="向前声明 @class向前声明的好处是避免相互依赖，减少编译时间，但是向前声明不能用在以下场景。因为向前声明只是告知编译器有这么一个“东西”，至于它的细节（方法，属性）编译器并不知道，但是以下场景，编译器必须知道这个“东西”的细节。
+
+一个类继承另一个类
+一个类遵循某个协议（protocol）
+
+atomic与nonatomic如果开发过IOS程序，你就会发现，其中所有属性都声明为nonatomi">
 
 
 
@@ -306,6 +321,7 @@
 <li>&#x4E00;&#x4E2A;&#x7C7B;&#x9075;&#x5FAA;&#x67D0;&#x4E2A;&#x534F;&#x8BAE;&#xFF08;protocol&#xFF09;</li>
 </ul>
 <h4 id="atomic&#x4E0E;nonatomic"><a href="#atomic&#x4E0E;nonatomic" class="headerlink" title="atomic&#x4E0E;nonatomic"></a>atomic&#x4E0E;nonatomic</h4><p>&#x5982;&#x679C;&#x5F00;&#x53D1;&#x8FC7;IOS&#x7A0B;&#x5E8F;&#xFF0C;&#x4F60;&#x5C31;&#x4F1A;&#x53D1;&#x73B0;&#xFF0C;&#x5176;&#x4E2D;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x90FD;&#x58F0;&#x660E;&#x4E3A;nonatomic&#x3002;&#x8FD9;&#x6837;&#x505A;&#x7684;&#x5386;&#x53F2;&#x539F;&#x56E0;&#x662F;&#xFF1A;&#x5728;ios&#x4E2D;&#x4F7F;&#x7528;&#x540C;&#x6B65;&#x9501;&#x7684;&#x5F00;&#x9500;&#x8F83;&#x5927;&#xFF0C;&#x8FD9;&#x4F1A;&#x5E26;&#x6765;&#x6027;&#x80FD;&#x95EE;&#x9898;&#x3002;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x5E76;&#x4E0D;&#x8981;&#x6C42;&#x5C5E;&#x6027;&#x5FC5;&#x987B;&#x662F;&#x201C;&#x539F;&#x5B50;&#x7684;&#x201D;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x5E76;&#x4E0D;&#x80FD;&#x4FDD;&#x8BC1;&#x201C;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x201D;&#xFF0C;&#x82E5;&#x8981;&#x5B9E;&#x73B0;&#x201C;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x201D;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x91C7;&#x53D6;&#x66F4;&#x4E3A;&#x6DF1;&#x5C42;&#x7684;&#x9501;&#x5B9A;&#x673A;&#x5236;&#x3002;<br><strong>&#x8BF4;&#x660E;&#xFF1A;NSString&#x7C7B;&#x578B;&#x7684;&#x5C5E;&#x6027;&#x901A;&#x5E38;&#x4F7F;&#x7528;copy&#x4FEE;&#x9970;&#x7B26;&#x6765;&#x8FDB;&#x884C;&#x4FDD;&#x62A4;&#x64CD;&#x4F5C;</strong></p>
+<a id="more"></a>
 
       
     </div>
