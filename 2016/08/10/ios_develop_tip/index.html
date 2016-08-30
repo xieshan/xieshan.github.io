@@ -96,7 +96,7 @@
 
 使用imageNamed：方法加载图片，系统首先会根据文件名称去缓存中搜索，如果缓存中有该图片，直接加载图片；如果缓存中没有该图片，系统就会到app目录下搜索改图片并对图片进行缓存；  
 使用imageWithContentsOfFile:方法加载图片，系统">
-<meta property="og:updated_time" content="2016-08-30T10:56:12.000Z">
+<meta property="og:updated_time" content="2016-08-30T11:04:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IOS开发小记">
 <meta name="twitter:description" content="UIImage类imageNamed:方法与imageWithContentsOfFile:区别两者的区别在于系统是否会对图片进行缓存  
@@ -321,13 +321,16 @@
 <h5 id="&#x5B9E;&#x73B0;"><a href="#&#x5B9E;&#x73B0;" class="headerlink" title="&#x5B9E;&#x73B0;"></a>&#x5B9E;&#x73B0;</h5><ol>
 <li>&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;NSObject&#x7684;&#x7C7B;&#x522B;&#xFF0C;&#x540D;&#x79F0;&#x4E3A;SingleInstance&#xFF1B;</li>
 <li>&#x5728;.h(NSObject+SingleInstance.h)&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;: + (instancetype)singleInstance;</li>
-<li>.m(NSObject+SingleInstance.m)&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x5982;&#x4E0B;   <blockquote>
-<p>+(instancetype)singleInstance{<br> static id instance = nil;<br> static dispatch_once_t onceToken;<br> dispatch_once(&amp;onceToken, ^{  </p>
-<pre><code>Class class = [self class];   
-instance = [[class alloc] init];  
-</code></pre><p> });<br> return instance;<br>} </p>
-</blockquote>
-</li>
+<li>.m(NSObject+SingleInstance.m)&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x5982;&#x4E0B;   <pre><code>+(instancetype)singleInstance{    
+ static id instance = nil;  
+ static dispatch_once_t onceToken;  
+ dispatch_once(&amp;onceToken, ^{  
+    Class class = [self class];   
+    instance = [[class alloc] init];  
+ });  
+    return instance;  
+ } 
+</code></pre></li>
 </ol>
 <h5 id="&#x4F7F;&#x7528;"><a href="#&#x4F7F;&#x7528;" class="headerlink" title="&#x4F7F;&#x7528;"></a>&#x4F7F;&#x7528;</h5><p>&#x5728;&#x9700;&#x8981;&#x8C03;&#x7528;&#x7684;&#x5730;&#x65B9;&#x6216;&#x8005;&#x5728;.pch&#x6587;&#x4EF6;&#x4E2D;&#x5F15;&#x5165;&#x5934;&#x6587;&#x4EF6;(NSObject+SingleInstance.h)&#xFF0C;&#x5373;&#x53EF;&#x8C03;&#x7528;singleInstance&#x65B9;&#x6CD5;&#x3002;</p>
 
